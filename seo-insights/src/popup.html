@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SEO Insights</title>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="libs/jquery-3.7.1.min.js"></script>
+		<script type="text/javascript" src="libs/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="scripts/helper.js"></script>
+		<script type="text/javascript" src="popup.js"></script>
+		<link type="text/css" rel="stylesheet" href="libs/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="popup.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+
+			<nav class="nav-main">
+				<div class="nav nav-pills flex-nowrap" role="tablist">
+					<button class="nav-link active" id="view-summary-tab" data-bs-toggle="tab" data-bs-target="#view-summary" type="button" role="tab" aria-controls="view-summary" aria-selected="true">__MSG_summary__</button>
+					<button class="nav-link" id="view-meta-details-tab" data-bs-toggle="tab" data-bs-target="#view-meta-details" type="button" role="tab" aria-controls="view-meta-details" aria-selected="false">Meta</button>
+					<button class="nav-link" id="view-headings-tab" data-bs-toggle="tab" data-bs-target="#view-headings" type="button" role="tab" aria-controls="view-headings" aria-selected="false">__MSG_headings__</button>
+					<button class="nav-link" id="view-images-tab" data-bs-toggle="tab" data-bs-target="#view-images" type="button" role="tab" aria-controls="view-images" aria-selected="false">__MSG_images__</button>
+					<button class="nav-link" id="view-hyperlinks-tab" data-bs-toggle="tab" data-bs-target="#view-hyperlinks" type="button" role="tab" aria-controls="view-hyperlinks" aria-selected="false">Links</button>
+					<button class="nav-link" id="view-files-tab" data-bs-toggle="tab" data-bs-target="#view-files" type="button" role="tab" aria-controls="view-files" aria-selected="false">__MSG_files__</button>
+					<button class="nav-link" id="view-headers-tab" data-bs-toggle="tab" data-bs-target="#view-headers" type="button" role="tab" aria-controls="view-header" aria-selected="false">Header</button>
+					<button class="nav-link" id="view-tools-tab" data-bs-toggle="tab" data-bs-target="#view-tools" type="button" role="tab" aria-controls="view-tools" aria-selected="false">Tools</button>
+				</div>
+			</nav>
+
+			<!-- content of the tab pages -->
+			<div class="tab-content">
+
+				<!-- content of the summary tab page -->
+				<div class="tab-pane fade show active" id="view-summary" role="tabpanel" aria-labelledby="view-summary-tab">
+
+					<!-- common meta information -->
+					<table class="table-sm item-list" id="meta-head-info">
+						<tbody></tbody>
+					</table>
+				</div>
+
+				<!-- content of the meta tab page -->
+				<div class="tab-pane fade" id="view-meta-details" role="tabpanel" aria-labelledby="view-meta-details-tab">
+					<div class="accordion accordion-flush mt-2" id="meta-details">
+
+						<!-- Meta Details - Open Graph - Basic -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-opengraph-basic-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-opengraph-basic-content" aria-expanded="false" aria-controls="meta-details-opengraph-basic-content">Open Graph - Basic</button>
+							</h2>
+							<div id="meta-details-opengraph-basic-content" class="accordion-collapse collapse" aria-labelledby="meta-details-opengraph-basic-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-opengraph-basic">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Meta Details - Open Graph - Article -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-opengraph-article-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-opengraph-article-content" aria-expanded="false" aria-controls="meta-details-opengraph-article-content">Open Graph - Article</button>
+							</h2>
+							<div id="meta-details-opengraph-article-content" class="accordion-collapse collapse" aria-labelledby="meta-details-opengraph-article-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-opengraph-article">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Meta Details - Open Graph - Audio -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-opengraph-audio-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-opengraph-audio-content" aria-expanded="false" aria-controls="meta-details-opengraph-audio-content">Open Graph - Audio</button>
+							</h2>
+							<div id="meta-details-opengraph-audio-content" class="accordion-collapse collapse" aria-labelledby="meta-details-opengraph-audio-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-opengraph-audio">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Meta Details - Open Graph - Book -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-opengraph-book-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-opengraph-book-content" aria-expanded="false" aria-controls="meta-details-opengraph-book-content">Open Graph - Book</button>
+							</h2>
+							<div id="meta-details-opengraph-book-content" class="accordion-collapse collapse" aria-labelledby="meta-details-opengraph-book-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-opengraph-book">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Meta Details - Open Graph - Image -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-opengraph-image-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-opengraph-image-content" aria-expanded="false" aria-controls="meta-details-opengraph-image-content">Open Graph - Image</button>
+							</h2>
+							<div id="meta-details-opengraph-image-content" class="accordion-collapse collapse" aria-labelledby="meta-details-opengraph-image-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-opengraph-image">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Meta Details - Open Graph - Profile -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-opengraph-profile-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-opengraph-profile-content" aria-expanded="false" aria-controls="meta-details-opengraph-profile-content">Open Graph - Profile</button>
+							</h2>
+							<div id="meta-details-opengraph-profile-content" class="accordion-collapse collapse" aria-labelledby="meta-details-opengraph-profile-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-opengraph-profile">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Meta Details - Open Graph - Video -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-opengraph-video-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-opengraph-video-content" aria-expanded="false" aria-controls="meta-details-opengraph-video-content">Open Graph - Video</button>
+							</h2>
+							<div id="meta-details-opengraph-video-content" class="accordion-collapse collapse" aria-labelledby="meta-details-opengraph-video-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-opengraph-video">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Meta Details - Twitter -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-twitter-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-twitter-content" aria-expanded="false" aria-controls="meta-details-twitter-content">Twitter</button>
+							</h2>
+							<div id="meta-details-twitter-content" class="accordion-collapse collapse" aria-labelledby="meta-details-twitter-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-twitter">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Meta Details - Parse.ly -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-parsely-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-parsely-content" aria-expanded="false" aria-controls="meta-details-parsely-content">Parse.ly</button>
+							</h2>
+							<div id="meta-details-parsely-content" class="accordion-collapse collapse" aria-labelledby="meta-details-parsely-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-parsely">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Meta Details - Dublin Core -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-dublincore-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-dublincore-content" aria-expanded="false" aria-controls="meta-details-dublincore-content">Dublin Core</button>
+							</h2>
+							<div id="meta-details-dublincore-content" class="accordion-collapse collapse" aria-labelledby="meta-details-dublincore-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-dublin-core">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Shareaholic - Content -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-shareaholic-content-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-shareaholic-content-content" aria-expanded="false" aria-controls="meta-details-shareaholic-content-content">Shareaholic - Content</button>
+							</h2>
+							<div id="meta-details-shareaholic-content-content" class="accordion-collapse collapse" aria-labelledby="meta-details-shareaholic-content-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-shareaholic-content">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Shareaholic - Feature -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-shareaholic-feature-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-shareaholic-feature-content" aria-expanded="false" aria-controls="meta-details-shareaholic-feature-content">Shareaholic - Feature</button>
+							</h2>
+							<div id="meta-details-shareaholic-feature-content" class="accordion-collapse collapse" aria-labelledby="meta-details-shareaholic-feature-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-shareaholic-feature">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Meta Details - Others -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="meta-details-others-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#meta-details-others-content" aria-expanded="false" aria-controls="meta-details-others-content">__MSG_others__</button>
+							</h2>
+							<div id="meta-details-others-content" class="accordion-collapse collapse" aria-labelledby="meta-details-others-heading" data-bs-parent="#meta-details">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="meta-details-others">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<!-- ---------------------------------------- View for Headings ----------------------------------------- -->
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<div class="tab-pane fade" id="view-headings" role="tabpanel" aria-labelledby="view-headings-tab">
+
+					<!-- statistics for headings -->
+					<table class="table table-sm table-bordered mt-2 mb-0" id="heading-stats">
+						<thead class="table-dark">
+							<tr>
+								<th>h1</th>
+								<th>h2</th>
+								<th>h3</th>
+								<th>h4</th>
+								<th>h5</th>
+								<th>h6</th>
+								<th>total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="filter">
+								<td id="headings-h1"></td>
+								<td id="headings-h2"></td>
+								<td id="headings-h3"></td>
+								<td id="headings-h4"></td>
+								<td id="headings-h5"></td>
+								<td id="headings-h6"></td>
+								<td id="headings-all"></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- list of headings -->
+					<table class="table table-sm item-list" id="list-headings">
+						<tbody></tbody>
+					</table>
+
+					<!-- list of errors and warnings -->
+					<div class="accordion accordion-flush" id="heading-errors">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headings-errors-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#headings-errors-content" aria-expanded="false" aria-controls="headings-errors-content">__MSG_errors_warnings_hints__</button>
+							</h2>
+							<div id="headings-errors-content" class="accordion-collapse collapse" aria-labelledby="headings-errors-heading" data-bs-parent="#headings-errors">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="list-headings-errors">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<!-- ------------------------------------------ View for Images ----------------------------------------- -->
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<div class="tab-pane fade" id="view-images" role="tabpanel" aria-labelledby="view-images-tab">
+
+					<!-- statistics for images -->
+					<table class="table table-sm table-bordered mt-2 mb-2" id="image-stats">
+						<thead class="table-dark">
+							<tr>
+								<th>__MSG_all__</th>
+								<th>__MSG_without__ alt</th>
+								<th>__MSG_without__ src</th>
+								<th>__MSG_without__ title</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td id="image-stats-all"></td>
+								<td id="image-stats-without-alt"></td>
+								<td id="image-stats-without-src"></td>
+								<td id="image-stats-without-title"></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<nav>
+						<div class="nav nav-pills flex-nowrap" role="tablist">
+							<button class="nav-link active" id="nav-images-tab" data-bs-toggle="tab" data-bs-target="#nav-images" type="button" role="tab" aria-controls="nav-images" aria-selected="true">__MSG_images__</button>
+							<button class="nav-link" id="nav-images-domains-tab" data-bs-toggle="tab" data-bs-target="#nav-images-domains" type="button" role="tab" aria-controls="nav-images-domains" aria-selected="false">Domains</button>
+							<button class="nav-link" id="nav-images-icons-tab" data-bs-toggle="tab" data-bs-target="#nav-images-icons" type="button" role="tab" aria-controls="nav-images-icons" aria-selected="false">Icons</button>
+						</div>
+					</nav>
+					<div class="tab-content">
+						<div class="tab-pane fade show active" id="nav-images" role="tabpanel" aria-labelledby="nav-images-tab">
+							<table class="table table-sm item-list" id="list-images">
+								<tbody></tbody>
+							</table>
+						</div>
+						<div class="tab-pane fade" id="nav-images-domains" role="tabpanel" aria-labelledby="nav-images-domains-tab">
+							<table class="table table-sm item-list" id="list-image-domains">
+								<tbody></tbody>
+							</table>
+						</div>
+						<div class="tab-pane fade" id="nav-images-icons" role="tabpanel" aria-labelledby="nav-images-icons-tab">
+							<table class="table table-sm item-list" id="list-image-icons">
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<!-- ---------------------------------------- View for Hyperlinks --------------------------------------- -->
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<div class="tab-pane fade" id="view-hyperlinks" role="tabpanel" aria-labelledby="view-hyperlinks-tab">
+
+					<!-- statistics for hyperlinks -->
+					<table class="table table-sm table-bordered mt-2 mb-0" id="hyperlink-stats">
+						<thead class="table-dark">
+							<tr>
+								<th colspan="2">__MSG_links_lc__</th>
+								<th colspan="2">__MSG_internal__</th>
+								<th colspan="2">__MSG_external__</th>
+							</tr>
+							<tr>
+								<th>__MSG_all__</th>
+								<th>__MSG_unique__</th>
+								<th>__MSG_all__</th>
+								<th>__MSG_unique__</th>
+								<th>__MSG_all__</th>
+								<th>__MSG_unique__</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td id="hyperlink-stats-all"></td>
+								<td id="hyperlink-stats-all-unique"></td>
+								<td id="hyperlink-stats-internal"></td>
+								<td id="hyperlink-stats-internal-unique"></td>
+								<td id="hyperlink-stats-external"></td>
+								<td id="hyperlink-stats-external-unique"></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- statistics for attributes -->
+					<table class="table table-sm table-bordered mt-2 mb-2" id="hyperlink-attribute-stats">
+						<thead class="table-dark">
+							<tr>
+								<th>__MSG_without__ href</th>
+								<th>__MSG_without__ title</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td id="hyperlink-attribute-stats-without-href"></td>
+								<td id="hyperlink-attribute-stats-without-title"></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- statistics for protocols -->
+					<table class="table table-sm table-bordered mt-2 mb-2" id="hyperlink-protocol-stats">
+						<thead class="table-dark">
+							<tr>
+								<th>http</th>
+								<th>https</th>
+								<th>mailto</th>
+								<th>javascript</th>
+								<th>whatsapp</th>
+								<th>tel</th>
+								<th>__MSG_others_lc__</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td id="hyperlink-protocol-stats-http"></td>
+								<td id="hyperlink-protocol-stats-https"></td>
+								<td id="hyperlink-protocol-stats-mailto"></td>
+								<td id="hyperlink-protocol-stats-javascript"></td>
+								<td id="hyperlink-protocol-stats-whatsapp"></td>
+								<td id="hyperlink-protocol-stats-tel"></td>
+								<td id="hyperlink-protocol-stats-others"></td>
+							</tr>
+						</tbody>
+					</table>
+					<nav>
+						<div class="nav nav-pills flex-nowrap" role="tablist">
+							<button class="nav-link active" id="links-tab" data-bs-toggle="tab" data-bs-target="#links" type="button" role="tab" aria-controls="links" aria-selected="true">Links</button>
+							<button class="nav-link" id="links-alternate-tab" data-bs-toggle="tab" data-bs-target="#links-alternate" type="button" role="tab" aria-controls="links-alternate" aria-selected="false">Alternate</button>
+							<button class="nav-link" id="links-domains-tab" data-bs-toggle="tab" data-bs-target="#links-domains" type="button" role="tab" aria-controls="links-domains" aria-selected="false">Domains</button>
+							<button class="nav-link" id="links-preload-tab" data-bs-toggle="tab" data-bs-target="#links-preload" type="button" role="tab" aria-controls="links-preload" aria-selected="false">Preload</button>
+							<button class="nav-link" id="links-dns-prefetch-tab" data-bs-toggle="tab" data-bs-target="#links-dns-prefetch" type="button" role="tab" aria-controls="links-dns-prefetch" aria-selected="false">DNS Prefetch</button>
+							<button class="nav-link" id="links-preconnect-tab" data-bs-toggle="tab" data-bs-target="#links-preconnect" type="button" role="tab" aria-controls="links-preconnect" aria-selected="false">Preconnect</button>
+						</div>
+					</nav>
+					<div class="tab-content">
+						<div class="tab-pane fade show active" id="links" role="tabpanel" aria-labelledby="links-tab">
+							<table class="table table-sm item-list" id="list-hyperlink">
+								<tbody></tbody>
+							</table>
+						</div>
+						<div class="tab-pane fade" id="links-alternate" role="tabpanel" aria-labelledby="links-alternate-tab">
+							<table class="table table-sm item-list" id="list-alternate">
+								<tbody></tbody>
+							</table>
+						</div>
+						<div class="tab-pane fade" id="links-domains" role="tabpanel" aria-labelledby="links-domains-tab">
+							<table class="table table-sm item-list" id="list-hyperlink-domain">
+								<tbody></tbody>
+							</table>
+						</div>
+						<div class="tab-pane fade" id="links-preload" role="tabpanel" aria-labelledby="links-preload-tab">
+							<table class="table table-sm item-list" id="list-preload">
+								<tbody></tbody>
+							</table>
+						</div>
+						<div class="tab-pane fade" id="links-dns-prefetch" role="tabpanel" aria-labelledby="links-dns-prefetch-tab">
+							<table class="table table-sm item-list" id="list-dns-prefetch">
+								<tbody></tbody>
+							</table>
+						</div>
+						<div class="tab-pane fade" id="links-preconnect" role="tabpanel" aria-labelledby="links-preconnect-tab">
+							<table class="table table-sm item-list" id="list-preconnect">
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<!-- ------------------------------------------ View for Files ------------------------------------------ -->
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<div class="tab-pane fade" id="view-files" role="tabpanel" aria-labelledby="view-files-tab">
+					<div class="accordion accordion-flush mt-2" id="files-accordion">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="stylesheet-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#stylesheet-content" aria-expanded="false" aria-controls="stylesheet-content">Stylesheets</button>
+							</h2>
+							<div id="stylesheet-content" class="accordion-collapse collapse" aria-labelledby="stylesheet-heading" data-bs-parent="#files-accordion">
+								<div class="accordion-body">
+									<nav>
+										<div class="nav nav-pills flex-nowrap" role="tablist">
+											<button class="nav-link active" id="files-stylesheet-tab" data-bs-toggle="pill" data-bs-target="#files-stylesheet" type="button" role="tab" aria-controls="files-stylesheet" aria-selected="true">__MSG_files__</button>
+											<button class="nav-link" id="files-stylesheet-domain-tab" data-bs-toggle="pill" data-bs-target="#files-stylesheet-domain" type="button" role="tab" aria-controls="files-stylesheet-domain" aria-selected="false">Domains</button>
+										</div>
+									</nav>
+									<div class="tab-content">
+										<div class="tab-pane fade show active" id="files-stylesheet" role="tabpanel" aria-labelledby="files-stylesheet-tab">
+											<table class="table table-sm item-list" id="files-stylesheet">
+												<tbody></tbody>
+											</table>
+										</div>
+										<div class="tab-pane fade" id="files-stylesheet-domain" role="tabpanel" aria-labelledby="files-stylesheet-domain-tab">
+											<table class="table table-sm item-list" id="list-files-stylesheet-domains">
+												<tbody></tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="javascript-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#javascript-content" aria-expanded="false" aria-controls="javascript-content">JavaScript</button>
+							</h2>
+							<div id="javascript-content" class="accordion-collapse collapse" aria-labelledby="javascript-heading" data-bs-parent="#files-accordion">
+								<div class="accordion-body">
+									<nav>
+										<div class="nav nav-pills flex-nowrap" role="tablist">
+											<button class="nav-link active" id="files-javascript-tab" data-bs-toggle="tab" data-bs-target="#files-javascript" type="button" role="tab" aria-controls="files-javascript" aria-selected="true">__MSG_files__</button>
+											<button class="nav-link" id="files-javascript-domains-tab" data-bs-toggle="tab" data-bs-target="#files-javascript-domains" type="button" role="tab" aria-controls="files-javascript-domains" aria-selected="false">Domains</button>
+										</div>
+									</nav>
+									<div class="tab-content">
+										<div class="tab-pane fade show active" id="files-javascript" role="tabpanel" aria-labelledby="files-javascript-tab">
+											<table class="table table-sm item-list" id="files-javascript">
+												<tbody></tbody>
+											</table>
+										</div>
+										<div class="tab-pane fade" id="files-javascript-domains" role="tabpanel" aria-labelledby="files-javascript-domains-tab">
+											<table class="table table-sm item-list" id="list-files-javascript-domains">
+												<tbody></tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="special-heading">
+								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#special-content" aria-expanded="false" aria-controls="special-content">Special</button>
+							</h2>
+							<div id="special-content" class="accordion-collapse collapse" aria-labelledby="special-heading" data-bs-parent="#files-accordion">
+								<div class="accordion-body">
+									<table class="table table-sm item-list" id="files-special">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<!-- ----------------------------------------- View for Headers ----------------------------------------- -->
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<div class="tab-pane fade" id="view-headers" role="tabpanel" aria-labelledby="view-headers-tab">
+					<table class="table table-sm item-list" id="info-headers">
+						<tbody></tbody>
+					</table>
+				</div>
+
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<!-- ------------------------------------------ View for Tools ------------------------------------------ -->
+				<!-- ---------------------------------------------------------------------------------------------------- -->
+				<div class="tab-pane fade" id="view-tools" role="tabpanel" aria-labelledby="view-tools-tab">
+					<table class="table table-sm item-list" id="info-tools">
+						<tbody></tbody>
+					</table>
+					<div class="about">
+						<a href="https://github.com/SEO-Insights/seo-insights/releases/tag/0.0.5" target="_blank">SEO Insights 0.0.5</a>
+						<a href="https://github.com/SEO-Insights/seo-insights" target="_blank">GitHub</a>
+						<a href="https://chrome.google.com/webstore/detail/seo-insights/nlkopdpfkbifcibdoecnfabipofhnoom?hl=__MSG_@@ui_locale__" target="_blank">Chrome Web Store</a>
+						<a href="https://github.com/sebastianbrosch" target="_blank">SEO Insights by Sebastian Brosch</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="alert alert-warning alert-not-supported" role="alert"><strong>__MSG_hint__:</strong> __MSG_cant_use__</div>
+	</body>
+</html>

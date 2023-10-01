@@ -1,0 +1,38 @@
+{
+  "name": "seo-insights",
+  "version": "0.0.5",
+  "description": "SEO Insights is a Chrome extension to display the most important information of a website at a glance.",
+  "scripts": {
+    "css-stylelint": "stylelint src/**/*.{css,scss}",
+    "js-eslint": "eslint src/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEO-Insights/seo-insights.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "chrome",
+    "seo",
+    "edge",
+    "seotools",
+    "seo-optimization",
+    "edge-extension",
+    "seo-analysis",
+    "seo-tools",
+    "seo-insights"
+  ],
+  "author": "chrome-extensions@sebastianbrosch.de",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/SEO-Insights/seo-insights/issues"
+  },
+  "homepage": "https://github.com/SEO-Insights/seo-insights#readme",
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "stylelint": "^15.10.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.0"
+  }
+}
