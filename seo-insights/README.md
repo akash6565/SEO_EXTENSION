@@ -6,7 +6,7 @@
 
 SEO Insights is a Chrome extension to display the most important information of a website at a glance.
 
-*Read this in other languages: [English](README.md), [Deutsch](README.de.md)*
+*Read this in other languages: [English](README.md)*
 
 ### :star: Features
 
